@@ -1,0 +1,12 @@
+services:
+  web:
+    container_name: self
+    environment:
+      - my_env_var=foo
+    build: ./
+    volumes:
+      - ./:/self
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
